@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.work-sans-light {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.work-sans-regular {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.work-sans-bold {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Add more classes for other weights as needed */
+
+.slider-progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #e5e7eb;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .slider-progress:hover {
+    opacity: 1;
+  }
+  
+  .slider-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .slider-progress::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+  }
+  
+  .slider-progress::-webkit-slider-thumb:hover,
+  .slider-progress::-moz-range-thumb:hover {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.1);
+  }
+  
+  .slider-progress:active::-webkit-slider-thumb,
+  .slider-progress:active::-moz-range-thumb {
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.2);
+  }
+
+  .ff ul li::before {
+    content: "• "; /* Adds a dot before each list item */
+    color: black; /* Change the color of the dot if needed */
+    font-weight: bold; /* Makes the dot bold */
+    font-size: small; /* Adjust the size of the dot */
+    margin-right: 8px; /* Adds some space between the dot and the text */
+    margin-left: 10px; /* Adds space at the start of the list item */
+}
+
+
+
+  
