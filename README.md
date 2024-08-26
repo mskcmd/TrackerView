@@ -95,7 +95,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Muhammed Suhail K - [@your_twitter](https://x.com/msuhailcmd) - msuhailcmd@gmail.com
+Muhammed Suhail K - [msuhail](https://x.com/msuhailcmd) - msuhailcmd@gmail.com
 
 Project Link: [TrackView](https://github.com/mskcmd/TrackView)
 
