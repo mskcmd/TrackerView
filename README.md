@@ -108,17 +108,4 @@ Project Link: [TrackView](https://github.com/mskcmd/TrackView)
 - [TailwindCSS Documentation](https://tailwindcss.com/docs)
 ```
 
-This README provides a comprehensive overview of your project, including:
-
-1. A brief description and key features
-2. Technologies used
-3. Installation and setup instructions
-4. Screenshots (you'll need to add these)
-5. A roadmap for future development
-6. Instructions for contributing
-7. License information
-8. Contact details
-9. Acknowledgements
-
-Remember to replace placeholder text (like `Muhammed Suhail`, `[msuhail](https://x.com/msuhailcmd)`, `msuhailcmd@gmail.com`).
 
