@@ -5,8 +5,9 @@ const UploadForm = lazy(() => import("./Pages/UploadForm"));
 const TrackOne = lazy(() => import("./Pages/TrackOne"));
 const TrackTwo = lazy(() => import("./Pages/TrackTwo"));
 const TrackThree = lazy(() => import("./Pages/TrackThree"));
-import { VideoProvider } from "./Context/VideoContext";
+const Error404 = lazy(() => import("./Pages/Erorr404"));
 
+import { VideoProvider } from "./Context/VideoContext";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path="/Trackone" element={<TrackOne />} />
               <Route path="/Tracktwo" element={<TrackTwo />} />
               <Route path="/Trackthree" element={<TrackThree />} />
+              <Route path="*" element={<Error404 />} /> 
             </Routes>
           </Suspense>
         </VideoProvider>

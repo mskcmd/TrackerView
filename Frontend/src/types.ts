@@ -1,4 +1,6 @@
-export interface VideoData {
+
+
+  export interface VideoData {
     _id: string;
     name: string;
     videoNumber: number;

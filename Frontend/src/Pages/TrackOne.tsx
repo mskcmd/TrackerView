@@ -9,18 +9,9 @@ import image from "../../public/right.png";
 import image1 from "../../public/moduleone.png";
 import image2 from "../../public/moduetow.png";
 import ReactPlayer from "react-player";
+import { VideoData } from "../types";
 
-interface VideoData {
-  _id: string;
-  name: string;
-  videoNumber: number;
-  videoFile: string;
-  heading: string;
-  description: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-}
+
 
 const TrackOne: React.FC = () => {
   const [videoData, setVideoData] = useState<VideoData | null>(null);
@@ -83,7 +74,7 @@ const TrackOne: React.FC = () => {
   };
 
   const handleEnded = () => {
-    localStorage.removeItem("videoProgress");
+    // localStorage.removeItem("videoProgress");
     setPlaying(false);
   };
 
@@ -95,7 +86,7 @@ const TrackOne: React.FC = () => {
 
   const handlePrevious = () => {
     if (videoData && videoData.videoNumber > 1) {
-      navigate(`/Track${videoData.videoNumber - 1}`);
+      navigate("/Trackone");
     }
   };
 
@@ -130,7 +121,7 @@ const TrackOne: React.FC = () => {
           <div className="w-full flex justify-end">
             <ProgressBar calculateOverallProgress={calculateOverallProgress} />
           </div>
-          <div className="lg:rounded-lg w-full lg:w-[80%] mt-1 lg:ms-10 ms-1 mx-auto">
+          <div className="lg:rounded-lg w-full lg:w-[80%] lg:ms-10 p-3 mx-auto">
             <VideoPlayer videoFile={videoData.videoFile} onEnded={handleEnded} />
             <VideoControls onPrevious={handlePrevious} onNext={handleNext} onFullscreen={handleFullscreen} />
             <div className="400 w-full flex justify-end mt-2">

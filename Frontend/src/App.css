@@ -72,13 +72,40 @@
   }
 
   .ff ul li::before {
-    content: "• "; /* Adds a dot before each list item */
-    color: black; /* Change the color of the dot if needed */
-    font-weight: bold; /* Makes the dot bold */
-    font-size: small; /* Adjust the size of the dot */
-    margin-right: 8px; /* Adds some space between the dot and the text */
-    margin-left: 10px; /* Adds space at the start of the list item */
+    content: "• "; 
+    color: black; 
+    font-weight: bold; 
+    font-size: small; 
+    margin-right: 8px; 
+    margin-left: 10px; 
 }
+
+
+.ss ul {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 20px; /* Add some padding to the left */
+}
+
+.ss ul li {
+  position: relative;
+  margin-bottom: 10px; /* Space between list items */
+  padding-left: 20px; /* Space for custom bullet */
+}
+
+.ss ul li::before {
+  content: '•'; /* Custom bullet point */
+  position: absolute;
+  left: 0;
+  color: #000; /* Bullet color */
+  font-size: 20px; /* Bullet size */
+}
+
+
+
+
+
+
+
 
 
 

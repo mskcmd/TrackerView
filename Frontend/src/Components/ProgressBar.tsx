@@ -9,6 +9,7 @@ interface ProgressBarProps {
 const ProgressBar: React.FC<ProgressBarProps> = ({ calculateOverallProgress }) => {
   const progress = calculateOverallProgress();
 
+
   return (
     <div className="flex flex-col items-center">
       <div className="w-16 h-16 lg:w-20 lg:h-20 me-4 lg:me-16 mt-4 lg:mt-5 items-center">
@@ -26,8 +27,16 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ calculateOverallProgress }) =
         />
       </div>
       <p className="me-16 whitespace-nowrap">
-        {progress}% completed
-      </p>
+  {progress < 28 ? (
+    <>1</>
+  ) : progress < 48 ? (
+    <>2</>
+  ) : (
+    <>3</>
+  )} 
+  /8 completed
+</p>
+
     </div>
   );
 };

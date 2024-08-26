@@ -8,18 +8,9 @@ import { fetchHeading, getModuleThree } from "../App/ApiSlice";
 import image from "../../public/right.png";
 import image1 from "../../public/module4.png";
 import ReactPlayer from "react-player";
+import { VideoData } from "../types";
 
-interface VideoData {
-  _id: string;
-  name: string;
-  videoNumber: number;
-  videoFile: string;
-  heading: string;
-  description: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-}
+
 
 const TrackFour: React.FC = () => {
   const [videoData, setVideoData] = useState<VideoData | null>(null);
@@ -125,7 +116,7 @@ const TrackFour: React.FC = () => {
               {videoData.heading}
             </h2>
             <div
-              className="text-black text-xs lg:text-xl work-sans-regular font-medium"
+              className="text-black text-xs lg:text-xl work-sans-regular font-medium ff"
               dangerouslySetInnerHTML={{ __html: videoData.description }}
             />
           </div>
