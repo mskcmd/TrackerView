@@ -77,18 +77,7 @@ A state-of-the-art video TrackerView platform built with React and Node.js, feat
 
 5. Open `http://localhost:3000` in your browser
 
-## 📸 Screenshots
 
-![Dashboard](path/to/dashboard_screenshot.png)
-![Video Player](path/to/video_player_screenshot.png)
-![Upload Form](path/to/upload_form_screenshot.png)
-
-## 🗺️ Roadmap
-
-- [ ] Implement user authentication and profiles
-- [ ] Add quiz functionality to video courses
-- [ ] Introduce a recommendation system
-- [ ] Develop mobile apps for iOS and Android
 
 ## 🤝 Contributing
 
