@@ -44,7 +44,7 @@ A state-of-the-art video TrackerView platform built with React and Node.js, feat
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/video-learning-platform.git
+   git clone https://github.com/mskcmd/TrackerView.git
    ```
 
 2. Install dependencies for both frontend and backend
@@ -95,9 +95,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+Muhammed Suhail K - [@your_twitter](https://x.com/msuhailcmd) - msuhailcmd@gmail.com
 
-Project Link: [https://github.com/yourusername/video-learning-platform](https://github.com/yourusername/video-learning-platform)
+Project Link: [TrackView](https://github.com/mskcmd/TrackView)
 
 ## 🙏 Acknowledgements
 
