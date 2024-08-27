@@ -1,4 +1,11 @@
-import React, { createContext, useState, useContext, ReactNode, Dispatch, SetStateAction } from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  ReactNode,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 interface VideoContextProps {
   progress: number;
@@ -23,7 +30,9 @@ interface VideoContextProps {
 
 const VideoContext = createContext<VideoContextProps | undefined>(undefined);
 
-export const VideoProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const VideoProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [progress, setProgress] = useState(0);
   const [played, setPlayed] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -35,17 +44,28 @@ export const VideoProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [showSettings, setShowSettings] = useState(false);
 
   return (
-    <VideoContext.Provider value={{
-      progress, setProgress,
-      played, setPlayed,
-      playing, setPlaying,
-      volume, setVolume,
-      muted, setMuted,
-      playbackRate, setPlaybackRate,
-      duration, setDuration,
-      currentTime, setCurrentTime,
-      showSettings, setShowSettings
-    }}>
+    <VideoContext.Provider
+      value={{
+        progress,
+        setProgress,
+        played,
+        setPlayed,
+        playing,
+        setPlaying,
+        volume,
+        setVolume,
+        muted,
+        setMuted,
+        playbackRate,
+        setPlaybackRate,
+        duration,
+        setDuration,
+        currentTime,
+        setCurrentTime,
+        showSettings,
+        setShowSettings,
+      }}
+    >
       {children}
     </VideoContext.Provider>
   );
@@ -54,7 +74,7 @@ export const VideoProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 export const useVideoContext = () => {
   const context = useContext(VideoContext);
   if (context === undefined) {
-    throw new Error('useVideoContext must be used within a VideoProvider');
+    throw new Error("useVideoContext must be used within a VideoProvider");
   }
   return context;
 };

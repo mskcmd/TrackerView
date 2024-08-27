@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useVideoContext } from '../Context/VideoContext';
-import VideoPlayer from '../Components/VideoPlayer';
-import VideoControls from '../Components/VideoControls';
-import ProgressBar from '../Components/ProgressBar';
+import { useVideoContext } from "../Context/VideoContext";
+import VideoPlayer from "../Components/VideoPlayer";
+import VideoControls from "../Components/VideoControls";
+import ProgressBar from "../Components/ProgressBar";
 import { fetchHeading, getModuleTwo } from "../App/ApiSlice";
 import image from "../../public/right.png";
 import image1 from "../../public/modue3.png";
 import ReactPlayer from "react-player";
 import { VideoData } from "../types";
-
-
 
 const TrackFour: React.FC = () => {
   const [videoData, setVideoData] = useState<VideoData | null>(null);
@@ -87,7 +85,7 @@ const TrackFour: React.FC = () => {
 
   const handlePrevious = () => {
     if (videoData && videoData.videoNumber > 1) {
-        navigate("/Trackone");
+      navigate("/Trackone");
     }
   };
 
@@ -123,10 +121,17 @@ const TrackFour: React.FC = () => {
             <ProgressBar calculateOverallProgress={calculateOverallProgress} />
           </div>
           <div className="lg:rounded-lg w-full lg:w-[80%] mt-1 lg:ms-10 ms-1 mx-auto">
-            <VideoPlayer videoFile={videoData.videoFile} onEnded={handleEnded} />
-            <VideoControls onPrevious={handlePrevious} onNext={handleNext} onFullscreen={handleFullscreen} />
+            <VideoPlayer
+              videoFile={videoData.videoFile}
+              onEnded={handleEnded}
+            />
+            <VideoControls
+              onPrevious={handlePrevious}
+              onNext={handleNext}
+              onFullscreen={handleFullscreen}
+            />
             <div className="400 w-full flex justify-end mt-2">
-              <p className="me-3 mt-2">{head?.data}</p>
+              <p className="me-3 mt-2">{head?.data}:</p>
               <button
                 onClick={handleNext}
                 disabled={played < 0.99}

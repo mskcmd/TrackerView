@@ -33,38 +33,36 @@ export const uploadVideo = async (
 
 export const getModuleOne = async () => {
   try {
-    const response = await Api.get(Endpoints.ModuleOne)
-    return response
+    const response = await Api.get(Endpoints.ModuleOne);
+    return response;
   } catch (error) {
     console.log(error);
-
   }
-}
-
+};
 
 export const getModuleTwo = async () => {
   try {
-    const response = await Api.get(Endpoints.ModuleTow)
-    return response
+    const response = await Api.get(Endpoints.ModuleTow);
+    return response;
   } catch (error) {
     console.log(error);
-
   }
-}
+};
 
 export const getModuleThree = async () => {
   try {
-    const response = await Api.get(Endpoints.ModuleThree)
-    return response
+    const response = await Api.get(Endpoints.ModuleThree);
+    return response;
   } catch (error) {
     console.log(error);
-
   }
-}
+};
 
 export const fetchHeading = async (videoNumber: number) => {
   try {
-    const response = await Api.get(Endpoints.fetchHeading, { params: { videoNumber } });
+    const response = await Api.get(Endpoints.fetchHeading, {
+      params: { videoNumber },
+    });
     return response;
   } catch (error) {
     console.log(error);

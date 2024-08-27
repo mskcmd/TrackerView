@@ -24,12 +24,11 @@ interface UploadedFile {
   mimetype: string
 }
 
- const uploadFiles = async (file: UploadedFile): Promise<string> => {
-  console.log("Uploading file:", file.originalname);
+const uploadFiles = async (file: UploadedFile): Promise<string> => {
 
   const params = {
     Bucket: process.env.BUCKET_NAME as string,
-    Key: `uploads/${file.originalname}`, 
+    Key: `uploads/${file.originalname}`,
     Body: file.buffer,
     ContentType: file.mimetype,
     // ACL: 'public-  ',
@@ -37,10 +36,8 @@ interface UploadedFile {
 
   try {
     const data = await s3.upload(params).promise();
-    console.log("File uploaded successfully:", data);
-
     const url = `https://${process.env.BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${data.Key}`;
-    return url; 
+    return url;
   } catch (error) {
     console.error('S3 upload error:', error);
     if (error instanceof Error) {

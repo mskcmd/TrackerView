@@ -9,7 +9,7 @@ function UploadForm() {
   const [name, setName] = useState("");
   const [heading, setHeading] = useState("");
   const [description, setDescription] = useState("");
-  const [percentage , setPercentage ] = useState("");
+  const [percentage, setPercentage] = useState("");
   const [videoNumber, setVideoNumber] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,14 @@ function UploadForm() {
     setLoading(true);
 
     try {
-      const response = await uploadVideo(name, videoNumber, file, heading, description, percentage );
+      const response = await uploadVideo(
+        name,
+        videoNumber,
+        file,
+        heading,
+        description,
+        percentage
+      );
       console.log("Response:", response.message);
 
       if (response.message === "Video number already exists") {
@@ -119,12 +126,12 @@ function UploadForm() {
               className="block text-sm font-medium text-gray-700 mb-1"
             >
               <FiTag className="inline mr-2" />
-              Video Percentage 
+              Video Percentage
             </label>
             <input
               type="text"
               id="tagpercentage s"
-              value={percentage }
+              value={percentage}
               onChange={(e) => setPercentage(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required

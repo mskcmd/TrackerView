@@ -8,7 +8,7 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoFile, onEnded }) => {
-  const { playing, volume, muted, playbackRate, played, setPlayed, setDuration } = useVideoContext();
+  const { playing, volume, muted, playbackRate, setPlayed, setDuration } = useVideoContext();
 
   const handleProgress = (state: { played: number; playedSeconds: number; loaded: number; loadedSeconds: number }) => {
     setPlayed(state.played);

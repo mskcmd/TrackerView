@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useVideoContext } from '../Context/VideoContext';
-import VideoPlayer from '../Components/VideoPlayer';
-import VideoControls from '../Components/VideoControls';
-import ProgressBar from '../Components/ProgressBar';
+import { useVideoContext } from "../Context/VideoContext";
+import VideoPlayer from "../Components/VideoPlayer";
+import VideoControls from "../Components/VideoControls";
+import ProgressBar from "../Components/ProgressBar";
 import { fetchHeading, getModuleThree } from "../App/ApiSlice";
 import image from "../../public/right.png";
 import image1 from "../../public/module4.png";
 import ReactPlayer from "react-player";
 import { VideoData } from "../types";
-
-
 
 const TrackFour: React.FC = () => {
   const [videoData, setVideoData] = useState<VideoData | null>(null);
@@ -35,22 +33,21 @@ const TrackFour: React.FC = () => {
   useEffect(() => {
     const fetchHeadingData = async (videoNumber: number | any) => {
       try {
-        console.log("ggg",videoNumber);
+        console.log("ggg", videoNumber);
 
-        const response:string|any = await fetchHeading(videoNumber);
-        
+        const response: string | any = await fetchHeading(videoNumber);
+
         if (response) {
           setHead(response);
         }
-        console.log("resphonse",head?.data);
-
+        console.log("resphonse", head?.data);
       } catch (error) {
         console.error("Error fetching video data:", error);
       }
     };
 
     if (videoData?.videoNumber) {
-      fetchHeadingData(videoData.videoNumber=3);
+      fetchHeadingData((videoData.videoNumber = 3));
     }
   }, []);
 
@@ -90,7 +87,7 @@ const TrackFour: React.FC = () => {
 
   const handlePrevious = () => {
     if (videoData && videoData.videoNumber > 1) {
-        navigate("/Tracktwo");
+      navigate("/Tracktwo");
     }
   };
 
@@ -126,10 +123,19 @@ const TrackFour: React.FC = () => {
             <ProgressBar calculateOverallProgress={calculateOverallProgress} />
           </div>
           <div className="lg:rounded-lg w-full lg:w-[80%] mt-1 lg:ms-10 ms-1 mx-auto">
-            <VideoPlayer videoFile={videoData.videoFile} onEnded={handleEnded} />
-            <VideoControls onPrevious={handlePrevious} onNext={handleNext} onFullscreen={handleFullscreen} />
+            <VideoPlayer
+              videoFile={videoData.videoFile}
+              onEnded={handleEnded}
+            />
+            <VideoControls
+              onPrevious={handlePrevious}
+              onNext={handleNext}
+              onFullscreen={handleFullscreen}
+            />
             <div className="400 w-full flex justify-end mt-2">
-              <p className="me-3 mt-2">{head?.data}</p>
+              <p className="me-3 mt-2">
+                Module 4: Confined Space Entry and Rescue:
+              </p>
               <button
                 onClick={handleNext}
                 disabled={played < 0.99}
@@ -142,7 +148,7 @@ const TrackFour: React.FC = () => {
             </div>
           </div>
         </div>
-         <div className="hidden lg:block absolute left-0">
+        <div className="hidden lg:block absolute left-0">
           {" "}
           <img src={image1} className="w-44" />
         </div>
